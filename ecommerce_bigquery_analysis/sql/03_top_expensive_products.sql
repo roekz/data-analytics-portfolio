@@ -10,6 +10,8 @@ JOIN
   `bigquery-public-data.thelook_ecommerce.products` p
 ON
   oi.product_id = p.id
+WHERE
+  oi.status = "Complete"
 ORDER BY
   oi.sale_price DESC
 LIMIT 5
